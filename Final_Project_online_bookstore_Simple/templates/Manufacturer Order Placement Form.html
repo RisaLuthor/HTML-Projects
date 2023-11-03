@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufacturer Order Placement</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            background-image: url('manufacturer-bg.png'); /* Replace with your background image */
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .order-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            padding: 40px;
+            margin: 20px auto;
+            transform: translate(-50%, -55%);
+            background: transparent;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            backdrop-filter: blur(3px);
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+            border-radius: 10px;
+        }
+
+        .order-box p:first-child {
+            margin: 0 0 30px;
+            padding: 0;
+            color: #08ceffed;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .order-box .user-box {
+            position: relative;
+        }
+
+        .order-box .user-box input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #2f002c;
+            margin-bottom: 30px;
+            border: none;
+            border-bottom: 1px solid #08ceffed;
+            outline: none;
+            background: transparent;
+        }
+
+        .order-box .user-box label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #08ceffed;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .order-box .user-box input:focus~label,
+        .order-box .user-box input:valid~label {
+            top: -20px;
+            left: 0;
+            color: #08ceffed;
+            font-size: 12px;
+        }
+
+        .order-box form a {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            font-weight: bold;
+            color: #1152939;
+            font-size: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            overflow: hidden;
+            transition: .5s;
+            margin-top: 40px;
+            letter-spacing: 3px
+        }
+
+        .order-box a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 24px 0;
+        }
+
+        .icon-button {
+            margin-top: 15px;
+        }
+
+        .icon-button span {
+            padding-left: 17px;
+            padding-right: 17px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            color: #08ceffed;
+            border-radius: 5px;
+            line-height: 30px;
+            background-color: #6e6d6d;
+            backdrop-filter: blur(10px);
+        }
+
+        .icon-button span.facebook {
+            margin-right: 17px;
+        }
+
+        button:hover,
+        .icon-button span:hover {
+            background-color: #babecc8c;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="order-box">
+            <p>Manufacturer Order Placement</p>
+            <form>
+                <div class="user-box">
+                    <input required="true" name="product_name" type="text">
+                    <label>Product Name</label>
+                </div>
+                <div class="user-box">
+                    <input required="true" name="quantity" type="number" min="1">
+                    <label>Quantity</label>
+                </div>
+                <div class="user-box">
+                    <input required="true" name="unit_price" type="number" min="0" step="0.01">
+                    <label>Unit Price</label>
+                </div>
+                <a href="#">Place Order</a>
+                <div class="button">
+                    <a href="view-orders.html">
+                        <div class="button">View Orders</div>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>

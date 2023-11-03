@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/dropdown.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Crime</title>
+    </head>
+    
+    <body>
+        <script src="{{ url_for('static', filename='js/header.js') }}"></script>
+    <!-- Content Area -->
+    <div class="content">
+        <h1>Crime</h1>
+			<!-- Add a section to display Crime books -->
+    <section>
+        <div class="book-table">
+            <h1>Crime Books</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Render the Crime book data here using Jinja2 templating -->
+                    {% for index, row in crime_books.iterrows() %}
+                        <tr>
+                            <td>{{ row['Title'] }}</td>
+                            <td>{{ row['Author'] }}</td>
+                            <td>{{ row['Price'] }}</td>
+                            <td>{{ row['Quantity'] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+    </div>
+
+
+</body>
+</html>
