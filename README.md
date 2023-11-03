@@ -13,3 +13,5 @@ Semantics.p1:
 <br><p>A simple website of basic construction.</p>
 
 <br>
+Semantics.p2:
+<br><p>A simple website of social media inputs and blog construction.</p>
