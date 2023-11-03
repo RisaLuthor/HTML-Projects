@@ -1,0 +1,227 @@
+<!---Log-in-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Projects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* font-family: 'Josefin Sans', sans-serif; */
+            font-family: 'Poppins', sans-serif;
+            max-height: 100vh;
+            background-color: #152939;
+        }
+
+        /*nav */
+        header {
+            padding: 1.7rem 1rem;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            max-width: 80%;
+            margin: auto;
+            align-items: center;
+            background-color: transparent;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 800;
+        }
+
+        .logo a {
+            color: #08ceffed;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: #d5d7d5;
+            text-decoration: none;
+            font-size: .97rem;
+            font-weight: 600;
+            letter-spacing: .7px;
+            padding: 1rem;
+            padding: 0.4rem 1rem;
+        }
+
+        nav a.active,
+        nav a:hover {
+            color: #08ceffed;
+            border-radius: 1rem;
+            transition: all.3s ease-in-out;
+        }
+
+        .button {
+            display:flex;
+            gap: 1rem;
+        }
+        .button button {
+            font-weight: 500;
+            color: #fff;
+            border: 1px solid #fff;
+            background-color: transparent;
+            padding: .5rem 1rem;
+            border-radius: 20%;
+            cursor: pointer;
+        }
+
+        .button button:hover {
+            background-color: #08ceffed;
+            color: #152939;
+            transition: all .3s ease-in-out;
+        }
+
+        #click {
+            display: none;
+        }
+
+        .menu i {
+            color: #08ceffed;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        /* Nav */
+
+        section {
+            margin: 2rem 8.5rem;
+            ;
+        }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5rem auto;
+        }
+
+        .main h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #08ceffed;
+            /* animation: check 1s ease forwards;
+            animation-delay: .1s; */
+        }
+
+        .main p {
+            margin-top: 1rem;
+            font-size: .98rem;
+            color: #fff;
+        }
+        .main h1 span:nth-child(1) {
+            font-size: 1.5rem;
+        }
+
+        .main h1 span:nth-child(2) {
+            color: #08ceffed;
+        }
+
+        /* @keyframes check {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        } */
+
+        @media only screen and (max-width:480px) {
+            .menu {
+                display: block;
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: #08ceffed;
+            }
+
+            header {
+                padding: 0.7rem 1rem;
+                align-items: center;
+                max-width: 100%;
+            }
+
+            nav {
+                position: absolute;
+                display: grid;
+                top: 75px;
+                text-align: center;
+                background-color: #08ceffed;
+                left: -100%;
+                z-index: 1;
+                width: 100%;
+            }
+
+            #click:checked~nav {
+                left: 0%;
+                transition: all 0.3s ease;
+            }
+
+            section {
+                margin: 1rem 1.5rem;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">RMLuthor</a>
+        </div>
+        <input type="checkbox" id="click">
+        <label for="click" class="mainicon">
+            <div class="menu">
+                <i class="bi bi-list"></i>
+            </div>
+        </label>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="CarolMeadows.html">Carol</a>
+            <a href="RisaLuthor.html">Risa</a>
+            <a href="service.html">Service</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <!--login and signup button-->
+
+        <div class="button">
+            <a href="create-account.html">
+            <button>Sign up</button></a>
+            <a href="login.html">
+            <button>Log In</button></a>
+        </div>
+    </header>
+
+    <section>
+      <div class="main">
+          <div class="detail"><!---Name and short phase -->
+              <h1><span> Projects | Where your tech dreams become a reality</span> <h4><br><span style="color:#d5d7d5;"> All your dreams are within reach.</span><br> <span style="color:#08ceffed;">Upgrade to fit your reality. <br> Your dreams result in success.</span></h1>
+              </h4>
+              
+          </div>
+      </div>
+  </section>
+
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+</style>
+
+
+</html>

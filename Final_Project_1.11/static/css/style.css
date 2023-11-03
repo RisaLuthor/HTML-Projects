@@ -1,0 +1,209 @@
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* font-family: 'Josefin Sans', sans-serif; */
+            font-family: 'Poppins', sans-serif;
+            max-height: 100vh;
+            background-color: #152939;
+        }
+
+        /*nav */
+        header {
+            padding: 1.7rem 1rem;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            max-width: 30%;
+            margin: auto;
+            align-items: right;
+            background-color: transparent;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 800;
+            padding-left: 70px;
+            padding-top: 50px;
+        }
+
+        .logo a {
+            color: #08ceffed;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: #d5d7d5;
+            text-decoration: none;
+            font-size: .97rem;
+            font-weight: 600;
+            letter-spacing: .7px;
+            padding: 1rem;
+            padding: 0.4rem 1rem;
+        }
+
+        nav a.active,
+        nav a:hover {
+            color: #08ceffed;
+            border-radius: 1rem;
+            transition: all.3s ease-in-out;
+        }
+
+        .button {
+            display:flex;
+            gap: 1rem;
+        }
+        .button button {
+            font-weight: 500;
+            color: #fff;
+            border: 1px solid #fff;
+            background-color: transparent;
+            padding: .5rem .1rem;
+            border-radius: 20%;
+            cursor: pointer;
+        }
+
+        .button button:hover {
+            background-color: #08ceffed;
+            color: #152939;
+            transition: all .3s ease-in-out;
+        }
+
+        #click {
+            display: none;
+        }
+
+        .menu i {
+            color: #08ceffed;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        /* Nav */
+
+        section {
+            margin: 2rem 8.5rem;
+            ;
+        }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5rem auto;
+        }
+
+        .main h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #08ceffed;
+            /* animation: check 1s ease forwards;
+            animation-delay: .1s; */
+        }
+
+        .main p {
+            margin-top: 1rem;
+            font-size: .98rem;
+            color: #fff;
+        }
+
+        .social {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.4rem;
+            margin-top: 1.7rem;
+        }
+
+        .social a {
+            color: #08ceffed;
+            font-size: 1rem;
+            border: 1.6px solid #08ceffed;
+            border-radius: 50%;
+            padding: .35rem;
+            text-align: center;
+            width: 26px;
+        }
+
+        .social a:hover {
+            color: #1F252E;
+            background-color: #08ceffed;
+            box-shadow: 0 0 20px #08ceffed;
+            transition: all .3s ease-in-out;
+        }
+
+        .main h1 span:nth-child(1) {
+            font-size: 1.5rem;
+        }
+
+        .main h1 span:nth-child(2) {
+            color: #08ceffed;
+        }
+
+        .image {
+            background-repeat: no-repeat;
+            background-position: 0 -75px;
+            -webkit-box-shadow: 0 10px 10px -10px #000000;
+            -moz-box-shadow: 0 10px 10px -10px #000000;
+            box-shadow: 0px 16px 4px -10px #08ceffed;
+            width: 528px;
+            background-size: cover;
+        
+        }
+
+        /* @keyframes check {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        } */
+
+        @media only screen and (max-width:480px) {
+            .menu {
+                display: block;
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: green;
+            }
+
+            header {
+                padding: 0.7rem 1rem;
+                align-items: center;
+                max-width: 100%;
+            }
+
+            nav {
+                position: absolute;
+                display: grid;
+                top: 75px;
+                text-align: center;
+                background-color: #08ceffed;
+                left: 0;
+                z-index: 1;
+                width: 100%;
+                justify-content: flex-start;
+            }
+
+            #click:checked~nav {
+                left: 0%;
+                transition: all 0.3s ease;
+            }
+
+            section {
+                margin: 1rem 1.5rem;
+            }
+            body
+            background-color: white;
+            
+        }
+    </style>
