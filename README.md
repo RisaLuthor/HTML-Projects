@@ -9,6 +9,10 @@ Final_Project_Online_Bookstore_Simple:
 <br><p> A simple online bookstore website allows users to browse, search, and purchase books conveniently. It features a user-friendly interface with book listings, search functionality, and a secure payment gateway. Users can create accounts, manage their profiles, and track their order history. The website provides easy access to customer support for any inquiries or assistance.</p>
 
 <br>
+Project Portfolio 2024:
+<br><p>A collection of Projects to practice and demonstrate skill sets.</p>
+
+<br>
 Semantics.p1:
 <br><p>A simple website of basic construction.</p>
 
