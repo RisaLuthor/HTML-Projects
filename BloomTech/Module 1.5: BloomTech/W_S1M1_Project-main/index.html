@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Working on a Web Application</title>
+  <style>
+    #verse {
+      font-style: italic;
+      font-size: 2em;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Working on a Web Application</h1>
+  <p>Please load this file in VSCode and Chrome, and open the Console in Chrome Dev Tools.</p>
+  <p>Work through the challenges found inside the last script tag in this document,
+    until the verse below reads correctly and the Console reports all tests passing.</p>
+  <p id="verse"></p>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.js"></script>
+  <script>
+    // In CHALLENGES 1-8 you will write JavaScript statements to assign certain values to the "result" variables.
+    // (The "result" variables below are declared with let so we can assign values to them later.)
+    let result1, result2, result3, result4, result5, result6, result7, result8;
+
+    // To do this, translate each 🧠 pseudocode into a working set of statements.
+    // ❗ Do not change the values of any of the variables provided below.
+    // ❗ You can create new variables if you need to.
+    // ❗ The first challenge is already done for you:
+
+    // 👉 CHALLENGE 1
+    const num1 = 6;
+    const num2 = 5;
+    const num3 = 938460;
+    // 🧠 pseudocode:
+    // Statement 1: result1 is num1 to the num2th power, adding to the result of that the num3.
+    // Statement 2: result1 is itself, plus the remainder of dividing 10 by 3.
+    result1 = (num1 ** num2) + num3;
+    result1 += (10 % 3);
+
+    // 👉 CHALLENGE 2
+    const age1 = 38;
+    const age2 = 26;
+    // 🧠 pseudocode:
+    // Statement 1: assign to result2 the average of age1 and age2.
+    // Statement 2: increment result2 by one, using plus plus.
+    // Statement 3: declare a variable using let (choose a name that does not already exist in the script), assigning it number 10.
+    // Statement 4: decrease the value of your variable by 1, using minus minus.
+    // Statement 5: decrement result2 by the amount held inside the variable declared in Statement 3.
+    result2 = (age1 + age2) / 2;
+    result2++;
+    let theTen = 10;
+    theTen--;
+    result2 -= theTen;
+
+    // 👉 CHALLENGE 3
+    const val1 = 'mekjgchkjrtehvcmhrekjtlhmkjlvchauyshptbywkfgowximecmunkjrthlv';
+    const val2 = 'kjwerhgmsdsdjkgfuxcibnwufhyuaywqhevckergjmdqlcitelcrhklerhmklm';
+    const val3 = 'ksljdrghmkjetrhgmrkejtdsafhjhfdswqegxzoeutewhqwmthrekidjltrem';
+    // 🧠 pseudocode:
+    // Statement 1: declare a variable using const, assigning to it the concatenation of val1, val2, and val3.
+    // Statement 2: assign to result3 the number of characters in the concatenated string.
+    // ❗ Note: the number of characters in a string can be found using DOT length. Example:
+    //    const someString = 'abc';
+    //    console.log(someString.length); // prints 3
+    const concatenated = val1 + val2 + val3;
+    result3 = concatenated.length;
+
+    // 👉 CHALLENGE 4
+    const data1 = 5;
+    const data2 = 10;
+    const data3 = 20;
+    // 🧠 pseudocode:
+    // Statement 1: declare a variable with const holding a Boolean: whether data1 is bigger than data2.
+    // Statement 2: declare another variable with const holding a Boolean: whether your last variable is strictly equal to the string "false".
+    // Statement 3: assign to result4 the value of the variable declared in Statement 2.
+    // Statement 4: reassign to result4 itself plus the value in data3 (see in the Console what happens when you add a number to a Boolean!)
+    const data1BiggerThanData2 = data1 > data2;
+    const isFalseStringFalse =data1BiggerThanData2 ===  "false";
+    result4 = isFalseStringFalse;
+    result4 += data3
+
+    // 👉 CHALLENGE 5
+    const int1 = 67;
+    const int2 = 67;
+    const int3 = 96;
+    // 🧠 pseudocode:
+    // Statement 1: declare a variable with const, holding a Boolean: whether int1 smaller or equal to int2.
+    // Statement 2: declare a variable with const, holding a Boolean: whether int2 smaller or equal to int3.
+    // Statement 3: assign result5 to be a Boolean expression: your first var AND your second var.
+    // Statement 4: reassign result5 to itself, plus the remainder of dividing int3 by int2.
+    const smallerOrEqual = int1 <= int2;
+    const smallerOrEqualReloaded = int2 <= int3;
+    result5 = smallerOrEqual && smallerOrEqualReloaded;
+    result5 += int3 % int2;
+
+
+    // 👉 CHALLENGE 6
+    const amount1 = 4;
+    const amount2 = 3;
+    const amount3 = 15;
+    // 🧠 pseudocode:
+    // Statement 1: declare a variable with const, holding a Boolean: whether amount1 and amount2 are of the same type.
+    // Statement 2: declare a variable with const, holding a Boolean: whether either amount1 OR amount2 is an odd number.
+    // Statement 3: assign result6 to be a Boolean expression: your first var OR your second var OR the Boolean false.
+    // Statement 4: reassign result6 to be itself minus amount3.
+    const sameType = typeof amount1 === typeof amount2;
+    const someAreOdd = (amount1 % 2 !== 0) || (amount2 % 2 !== 0);
+    result6 = sameType || someAreOdd || false;
+    result6 -= amount3
+
+
+    // 👉 CHALLENGE 7
+    const friend1 = undefined;
+    const friend2 = 'undefined';
+    const friend3 = 7;
+    const friend4 = NaN;
+    // 🧠 pseudocode:
+    // Statement 1: declare a variable with const, holding a Boolean: whether both friend1 and friend2 are of the same type.
+    // Statement 2: declare a variable with const, holding a Boolean: whether both friend3 and friend4 are of the same type.
+    // Statement 3: assign to result7 whether any of your variables holds the Boolean true.
+    // Statement 4: assign result7 to be your second variable minus number 23.
+    const friendsSameType = typeof friend1 === typeof friend2;
+    const friendsSameType2 = typeof friend3 === typeof friend3;
+    result7 = friendsSameType || friendsSameType2 || true;
+    result7 -= 23;
+
+    // 👉 CHALLENGE 8
+    const winter = 0;
+    const spring = 1;
+    const summer = 2;
+    const fall = 3;
+    // 🧠 pseudocode:
+    // Statement 1: declare a variable holding whether season 4893792381 is winter OR summer.
+    // Statement 2: declare another variable holding whether whether season 845789437 is not fall.
+    // Statement 3: declare a third variable holding whether season 85947 is not spring AND season 84957 is not fall.
+    // Statement 4: assign result8 to be 707 minus the sum of your three variables.
+    // ❗ Note: the modulo operator is the key to solving this mystery. Also, seasons are zero-based: the first one is 0.
+    const isWinter = 4893792381 % 4 === winter;
+    const isSummer = 845789437 % 4 === summer;
+    const isWinterOrSummer = isWinter || isSummer; // s1
+    const isNotFall = 845789437 % 4 !== fall; // s2
+    const notSpringAndNotFall = (85947 % 4 !== spring) && (84957 !== fall); // s3
+    result8 = 707 - (isWinterOrSummer + isNotFall + notSpringAndNotFall);
+
+
+    // 🧪 TESTS, do not work below this line
+    // 🧪 TESTS, do not work below this line
+    // 🧪 TESTS, do not work below this line
+    let results = [
+      ['9647ded197b482a90bb1a92c27bc0386', result1],
+      ['1ff1de774005f8da13f42943881c655f', result2],
+      ['6cdd60ea0045eb7a6ec44c54d29ed402', result3],
+      ['98f13708210194c475687be6106a3b84', result4],
+      ['34173cb38f07f89ddbebc2ac9128303f', result5],
+      ['66d8c0f4ab3c3681ff3f9093b05136a6', result6],
+      ['8d2b9e08aff3573e99ce7966a0dd4628', result7],
+      ['4a47d2983c8bd392b120b627e0e1cab4', result8],
+    ]
+    function buildFinalResult(results) {
+      const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+      const chars = []
+      results.forEach(([hash, result], i) => {
+        const isCorrect = md5(result) === hash
+        console.log(`[TEST] result${i + 1} ${isCorrect ? 'looks good ✅' : 'is incorrect ❌'}`)
+        const letter = isCorrect ? fromNumToLetter(result) : alphabet[Math.floor(Math.random() * 26)]
+        chars.push(letter)
+      })
+      verse.textContent = `
+        ${chars[2]}r${chars[4]}a${chars[0]}${chars[4]},
+        inn${chars[5]}va${chars[0]}${chars[4]},
+        an${chars[7]}
+        ${chars[2]}hang${chars[4]}
+        ${chars[1]}${chars[5]}${chars[3]}r
+        ${chars[6]}${chars[5]}rl${chars[7]}
+        ${chars[6]}i${chars[0]}h
+        ${chars[2]}${chars[5]}${chars[7]}${chars[4]}`
+      function fromNumToLetter(num) {
+        const abs = Math.abs(num)
+        const result = alphabet[abs < 26 ? abs : abs % 26]
+        return result
+      }
+    }
+    buildFinalResult(results)
+  </script>
+</body>
+
+</html>
