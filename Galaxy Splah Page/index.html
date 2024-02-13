@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Galaxy Splash</title>
+    <style>
+        /* Base styles for the splash container */
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .splash-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+
+        /* Custom styles for the spiral galaxies */
+        .galaxy {
+            font-size: 2rem;
+            color: #fff;
+            position: absolute;
+            transform-origin: center;
+            animation: spin 5s linear infinite, fade 2s ease-in-out, spiral 10s linear infinite;
+            letter-spacing: 0.2rem; /* Adjust letter spacing here */
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fade {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes spiral {
+            0% {
+                transform: translateY(0) rotate(0);
+                letter-spacing: 0.3rem;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                letter-spacing: 6rem; /* Adjust letter spacing here */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Splash container -->
+    <div class="splash-container">
+        <span class="galaxy">LUTHOR SP-Ark</span>
+    </div>
+
+    <!-- Your main content goes here -->
+    <div>
+        <!-- Add your futuristic content here -->
+    </div>
+
+    <script>
+        // Hide the splash screen after a delay
+        setTimeout(() => {
+            const splashContainer = document.querySelector('.splash-container');
+            splashContainer.style.opacity = 0;
+        }, 9000); // Adjust the delay as needed
+    </script>
+</body>
+</html>
