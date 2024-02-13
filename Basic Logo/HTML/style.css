@@ -1,0 +1,41 @@
+body {
+    background-color: white;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    width:700px;
+  }
+  
+  .container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  .centered {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    color: #459287;
+  }
+  
+  button {
+    height:40px;
+    width: 160px;
+    font-size: 18px;
+    color: white;
+    background-color:#2c5e62;
+    border-radius: 8px;
+  }
+  
+  p {
+      text-align: center;
+  }
+  
