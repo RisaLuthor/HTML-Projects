@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launch Website</title>
+</head>
+<body>
+    <h1>Click the Image to Launch the Website</h1>
+    <img src="LPTattoo.jpg" alt="Launch Website" id="launchImage" style="cursor: pointer; width: 200px; height: 200px;">
+    
+    <script>
+        // Function to launch the website
+        function launchWebsite() {
+            const url = "https://www.rmluthor.us"; // Replace with the URL you want to launch
+            window.open(url, '_blank');
+        }
+
+        // Event listener for when the image is clicked
+        document.getElementById('launchImage').addEventListener('click', function() {
+            // Call the function to launch the website
+            launchWebsite();
+        });
+    </script>
+</body>
+</html>
